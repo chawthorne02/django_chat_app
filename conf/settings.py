@@ -54,9 +54,9 @@ INSTALLED_APPS = [
 
 
     #local
+    'api.apps.ApiConfig',
     'chats.apps.ChatsConfig',
     'frontend.apps.FrontendConfig',
-    'api.apps.ApiConfig',
 
 ]
 
@@ -142,3 +142,20 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# MEDIA_ROOT and MEDIA_URL
+# https://docs.djangoproject.com/en/4.1/ref/settings/#media_root
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+# Staic file directories
+# https://docs.djangoproject.com/en/4.1/ref/settings/#staticfiles-dirs
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'frontend/static/build/static/'),)
+REACT_APP_DIR = os.path.join(BASE_DIR, 'frontend/static')
+
+# Email backend
+# https://docs.djangoproject.com/en/4.1/topics/email/#console-backend
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
