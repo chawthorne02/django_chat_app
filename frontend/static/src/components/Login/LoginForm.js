@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Cookies from "js-cookie";
-import  Button from "bootstrap";
-import  Form  from "react-bootstrap";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 function LoginForm(props) {
   const [state, setState] = useState({

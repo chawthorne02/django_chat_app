@@ -91,7 +91,7 @@ function RegisterForm(props) {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="password2">
-            <Form.Label>Password 2</Form.Label>
+            <Form.Label>Password Confirmation</Form.Label>
             <Form.Control
               type="password"
               placeholder="Enter password again"
