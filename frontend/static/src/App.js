@@ -20,7 +20,9 @@ function App() {
          /> : <UserLogin setAuth={setAuth} 
         //  setUser={setUser}
          />}
-         
+        <div className='slogan'>
+          <p>A Digital HQ</p>
+        </div>
     </Container>
   );
 }

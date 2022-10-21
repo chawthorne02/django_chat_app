@@ -1,26 +1,31 @@
 from django.db import models
+from django.conf import settings
 
-# from traitlets import default
+
+
+
+
+
+
+
 
 # Create your models here.
 
 class Room(models.Model):
-    room = models.CharField(max_length=255)
-    Creator = models.CharField(max_length=255)
-    # image = models.ImageField(upload_to="books", null=True)
-
-
-
+    name = models.CharField(max_length=255, blank=True)
+    
+    # image = models.ImageField(upload_to="books", null=True
     
     def __str__(self):
-        return self.room
+        return self.name
 
 
 class Message(models.Model):
-    message = models.CharField(max_length=255)
-    # author = models.CharField(max_length=255)
+    text = models.TextField(null=True)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE, null=True)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True)
     # image = models.ImageField(upload_to="books", null=True)
-    # location_id = models.ForeignKey(Room, on_delete=models.CASCADE, default=1)
+    
     
     def __str__(self):
-        return self.message
+        return self.text[:50]
