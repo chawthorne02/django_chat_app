@@ -50,7 +50,6 @@ function LoginForm(props) {
       <Form.Label>Username</Form.Label>
       <Form.Control
         type="text"
-        id="username"
         placeholder="Enter username"
         value={state.username}
         onChange={handleInput}
@@ -63,7 +62,6 @@ function LoginForm(props) {
       <Form.Label>Email</Form.Label>
       <Form.Control
         type="email"
-        id="email"
         placeholder="Enter email"
         value={state.email}
         onChange={handleInput}
@@ -76,7 +74,6 @@ function LoginForm(props) {
       <Form.Label>Password</Form.Label>
       <Form.Control
         type="password"
-        id="password"
         placeholder="Enter password"
         value={state.password}
         onChange={handleInput}

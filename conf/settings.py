@@ -155,6 +155,10 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'frontend/static/build/static/'),)
 REACT_APP_DIR = os.path.join(BASE_DIR, 'frontend/static')
 
+# SIDE_ID
+# https://docs.djangoproject.com/en/4.1/ref/settings/#std-setting-SITE_ID
+SITE_ID = 1
+
 # Email backend
 # https://docs.djangoproject.com/en/4.1/topics/email/#console-backend
 

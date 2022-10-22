@@ -8,12 +8,12 @@ function RegisterForm(props) {
       username: "",
       email: "",
       password1: "",
-      password_confirm: "",
+      password2: "",
     });
   
     const checkEqualPass = (e) => {
       e.preventDefault();
-      if (stateReg.password1 !== stateReg.password_confirm) {
+      if (stateReg.password1 !== stateReg.password2) {
         alert("Your passwords do not match.");
         return;
       } else {
@@ -95,7 +95,7 @@ function RegisterForm(props) {
             <Form.Control
               type="password"
               placeholder="Enter password again"
-              value={stateReg.password_confirm}
+              value={stateReg.password2}
               onChange={handleInput}
               required
               name="password2"
